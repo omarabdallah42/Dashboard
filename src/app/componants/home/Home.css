@@ -1,0 +1,231 @@
+.header {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.header h3{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    
+}
+.header input{
+    width: 91%;
+    height: 35px;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    padding: 0 13px;
+    border: none;
+    font-size: 16px;
+}
+
+.searchContainer{
+    width: 50%;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ffffff85;
+    transition: .5s all;
+}
+.searchContainer:HOVER{
+  border: 1px solid rgb(40, 88, 255);  
+    box-shadow: 0 0 60px rgba(40, 88, 255, 0.5);
+}
+.searchContainer svg{
+    color: #ffffff9a;
+}
+.profileContainer{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+.growthIcon{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+}
+.profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    min-width: 100%;
+    gap: 10px;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.generalStatisticsCard{
+    width:250px;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    border: 1px solid #ffffff1a;
+    border-radius: 25px;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+
+    justify-content: center;
+}
+
+.Home-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.statisticsHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.statisticsValue{
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.statisticsValue p{
+    font-size: 27px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+.chartSuspense{
+    background-color: red;
+}
+.statisticsGrowth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Home-chart{
+   display: flex;
+   gap: 20px;
+}
+.w-full{
+    width: 100%;
+}
+.RadarChart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.VictoryContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.Home-chart{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+.Home-chart-victory{
+    border: 1px solid #ffffff1a;
+    border-radius: 25px;
+    display: flex;
+    padding:  20px ;
+    justify-content: left;
+    flex-direction: column;
+}
+.Home-chart-victory h3{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+.chart-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+
+}
+.Home-chart-bar-Line{
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px 20px;
+ 
+    border: 1px solid #ffffff1a;
+}
+.ChartContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.Home-chart-bar-Line canvas{
+    width: 100% !important;
+    height: 100% !important;
+}
+.Home-map{
+    width:42.5%;
+    display: flex;
+    gap: 20px;
+    height: 435px;
+    border-radius: 20px;
+    padding-top: 10px ;
+    border: 1px solid #ffffff1a;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Home-map div{
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.Home-map div svg{
+    width: 100% !important;
+    height: 100% !important;
+}

@@ -1,0 +1,64 @@
+.notification-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 40px;
+    padding: 10px;
+}
+.notification-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notification-item-beo{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 60%;
+}
+.notification-item-beo h2{
+    color: #ffffffde;
+    font-size: 20px;
+}
+.notification-item-beo p{
+    color: #ffffff9c;
+    font-size: 15px;
+}
+.notification-item-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    background-color: #1b1b25;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+.checkbox{
+    display: none;
+}
+.button::before{
+    position: absolute;
+    content: '';
+    width: 30px;
+    border-radius: 200px;
+    height: 30px;
+    background-color: #fff;
+    transition: .5s;
+}
+.notification-item-toggle input:checked + .button{
+    background-color: #1c48c0 ;
+}
+.notification-item-toggle input:checked + .button::before{
+    transform: translateX(40px);
+    background-color: #ffffff;
+}

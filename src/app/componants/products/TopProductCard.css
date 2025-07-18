@@ -1,0 +1,277 @@
+.TopProducts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+.TopProducts-Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+.TopProductCard{
+    width: 250px;
+    max-width: 250px;
+    height: 300px ;
+  border: 2px solid #ffffff1a;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    background-color: #1d1b1b8e;
+
+}
+.img-product-card {
+    width: 100%;
+    height: 100%; /* ارتفاع ثابت */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+.img-product-card img {
+    min-width: 100%;
+    padding: 20px;
+    min-height: 200px;
+    max-width: 100%;
+    max-height: 210px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.product-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description {
+  color: #ffffff83;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+    height: 70px;
+}
+
+.rating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ProductInfo{
+    width: 80%;
+    background-color: #1d1b1b;
+    border: 1px solid #ffffff1a;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    position: fixed;
+    padding: 20px;
+    z-index: 999;
+    height: 80%;
+
+}
+
+.ProductInfo-Image{
+    width: 40%;   
+
+}
+.ProductInfo-Details{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 60%;
+    max-width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.ProductInfo-Details-show-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.ProductInfo-Details-show-inputs label{
+    font-size: 20px;
+}
+.inputs{
+    width: 100% !important;
+    color: white   !important;
+}
+.MuiFormControl-root{
+    color: white !important;
+    
+}
+.MuiFormLabel-root{
+    color: rgba(255, 255, 255, 0.767)  !important;
+}
+.MuiInputBase-input{
+    color: white !important;
+}
+.MuiInputBase-root{
+    border: 1px solid #ffffff1a !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1) !important;
+    background-color: #1d1b1b !important;
+    transition: .2s;
+}
+.MuiInputBase-root:hover{
+    border: 1px solid #ffffff1a !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2) !important;
+    background-color: #1d1b1b !important;
+}
+.Title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100px;
+    width: 100%;
+}
+
+.TextArea{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 200px;
+    width: 100%;
+}
+.TextArea textarea{
+    width: 100%;
+    height: 100px;
+    background-color: #1d1b1b !important;
+    border: 1px solid #ffffff1a !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    max-width: 100%;
+    min-width: 80%;
+    max-height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    min-height: 70%;
+    transition: .5s;
+}
+.TextArea textarea:focus{
+    border: 1px solid #ffffff1a !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2) !important;
+    background-color: #1d1b1b !important;
+}
+.TextArea textarea:hover{
+    border: 1px solid #ffffff1a !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2) !important;
+    background-color: #1d1b1b !important;
+}
+.ProductInfo-Details-show-categories{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.MuiSvgIcon-root{
+    fill: white !important;
+}
+.ProductInfo-Image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+.Main-Image{
+    width: 100%;
+    height: 50%;
+    background-color: #ffffff1a;
+    border-radius: 10px;
+        transition: .5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+}
+.ProductInfo-Image .Main-Image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.Sub-Images{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Sub-Images div{
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff1a;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+    align-items: center;
+}
+.Sub-Images div img{
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.Main-Image:hover,.Sub-Images div:hover{
+    cursor: pointer;
+    background-color: #ffffff1a;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+}
+.Sub-Images div:hover{
+    scale: 1.05;
+}
+.ProductInfo-Buttons{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+}
+.ProductInfo-Buttons button{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(40, 88, 255);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(40, 88, 255, 0.5);
+    color: white;
+    transition: .2s;
+}
+.ProductInfo-Buttons button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(40, 88, 255, 0.7);
+}
