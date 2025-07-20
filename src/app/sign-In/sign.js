@@ -7,13 +7,14 @@ import {
   faAt,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import "../sign-in/Enter.css";
+import "./Enter.css";
 import Link from "next/link";
 import { useProfileStore } from "../store/profile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNotificationStore } from "../store/notification ";
+
 export default function SignIn() {
-  const {  setNotification } = useNotificationStore();
+  const { setNotification } = useNotificationStore();
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const [isEmailValid, setIsEmailValid] = useState(false);
@@ -33,8 +34,6 @@ export default function SignIn() {
     password: "",
     remember: true,
   });
-
-  // تم حذف الحفظ والقراءة من localStorage
 
   useEffect(() => {
     const isCorrect =
@@ -66,11 +65,11 @@ export default function SignIn() {
   }, [userinfo, Admaininfo, setProfile]);
 
   return (
-    <div>
+    <div style={{width:'100%',height:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
       <div className="sign">
         <h1>Sign In</h1>
 
-        <div style={{ width: "400px" }}>
+        <div className="input">
           <div className="input">
             <label htmlFor="name">UserName</label>
             <div className="input-container">
@@ -107,7 +106,7 @@ export default function SignIn() {
           )}
         </div>
 
-        <div style={{ width: "400px" }}>
+        <div className="input" >
           <div className="input">
             <label htmlFor="confirmPassword">Password</label>
             <div className="input-container password-container">
@@ -146,12 +145,15 @@ export default function SignIn() {
           <p>Remember Me</p>
         </div>
 
-        <Link onClick={() => {
-  
-          setNotification({
-            message: `Sign In Successfully in ${ new Date().toLocaleString()} `,
-          });
-        }} className={isAllowed.className} href={isAllowed.href}>
+        <Link
+          onClick={() => {
+            setNotification({
+              message: `Sign In Successfully in ${new Date().toLocaleString()} `,
+            });
+          }}
+          className={isAllowed.className}
+          href={isAllowed.href}
+        >
           <button
             style={{ cursor: isAllowed.btn ? "not-allowed" : "pointer" }}
             disabled={isAllowed.btn}

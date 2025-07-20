@@ -67,7 +67,7 @@ const citiesData = [
 export default function App() {
   return (
     <div>
-      <MapSimple cities={citiesData} color="rgb(39, 76, 197)" />
+      <MapSimple  cities={citiesData} color="rgb(39, 76, 197)" />
     </div>
   );
 }

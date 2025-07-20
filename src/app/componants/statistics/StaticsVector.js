@@ -4,7 +4,6 @@ import React from "react";
 import { VictoryArea, VictoryChart, VictoryAxis, VictoryTooltip, VictoryVoronoiContainer } from "victory";
 
 const StaticsVector = ({ data,typeBar }) => {
-  // تأكد أن البيانات نسب مئوية
   const formattedData = data.map((y, i) => ({ x: i + 1, y }));
 
   const maxY = Math.max(...data, 100); // حتى لو أقل من 100، المحور يوضح أنه نسبة مئوية
@@ -13,7 +12,6 @@ const StaticsVector = ({ data,typeBar }) => {
   return (
     <div className="VictoryContainer">
       <VictoryChart
-
         domain={{
           x: [1, xLength],
           y: [0, Math.ceil(maxY / 10) * 10], // تقريب لأقرب 10

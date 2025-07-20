@@ -1,4 +1,3 @@
-"use client";
 import Home from '../../componants/home/Home';
 export default function Page() {
    return (

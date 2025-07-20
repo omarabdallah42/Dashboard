@@ -83,7 +83,7 @@ const activeNotifications = notification.filter(n => n.message?.trim() !== '');
       )}
       </Menu>
     </div>
-            </div>
+            </div> 
     </div>
   ); 
 };

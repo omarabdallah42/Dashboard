@@ -87,7 +87,7 @@ const handleFileChange = (e) => {
    <div className='Input'>
              <p> Name</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px", width: '25ch' } }}
+      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
       noValidate
       autoComplete="off"
     >
@@ -105,7 +105,7 @@ const handleFileChange = (e) => {
             <div className='Input'>
              <p>Role</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px", width: '25ch' } }}
+      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
       noValidate
       autoComplete="off"
       
@@ -124,7 +124,7 @@ const handleFileChange = (e) => {
     <div className='Input'>
              <p>Email</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px", width: '25ch' } }}
+      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
       noValidate
       autoComplete="off"
     >
@@ -141,7 +141,7 @@ const handleFileChange = (e) => {
            <div className='Input'>
              <p>Phone</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px", width: '25ch' } }}
+      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
       noValidate
       autoComplete="off"
     >

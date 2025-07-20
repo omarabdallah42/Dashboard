@@ -43,14 +43,13 @@ export default function Home() {
         />
       </div>
       <div className='Home-chart'>
-        <div className='Home-chart-victory'>
+        <div className='Home-chart-victory vector'>
           <h3>Statistics Growth</h3>
         <StatisticsVector typeBar={"%"} data={[0,50,40,900 ,100, 300, 600, 400,500,1100, 1000]}></StatisticsVector>
-
         </div>
-        <div className='Home-chart-victory'>
+        <div className='Home-chart-victory radar'>
           <h3>Statistics </h3>
-        <RadarChart  data1={[0,200,400,600,800,400]} data2={[0, 50, 40,80, 900 ,100, 300, 600, 400,500,1100, 1000]} label={["Products", "Revenues", "Orders", "Completed Deals", "Visitors", "Customers"]}></RadarChart>
+        <RadarChart  data1={[0,200,400,600,800,400]} data2={[0,80, 900 ,100, 300, 600, 400,500,1100, 1000]} label={["Products", "Revenues", "Orders", "Completed Deals", "Visitors", "Customers"]}></RadarChart>
         </div>
       </div>
       <div className='chart-bar'>
@@ -59,7 +58,7 @@ export default function Home() {
       </div>
       <div className='Home-map'>
         <h3>visitors countries</h3>
-        <Maps ></Maps>
+        <Maps />
         </div>
       </div>
       </div>

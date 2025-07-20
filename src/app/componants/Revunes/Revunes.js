@@ -62,7 +62,6 @@ const ITEM_HEIGHT = 48;
     { src:"/customer4.jpeg",type:'Seller' ,user: "Mohammed", money: 350, icon: faUserAlt, state: "Returning User", time: "2023-6-7" },
   ];
 
-  // لو عايز تسمي labels للمحاور في RadarChart
   const radarLabels = ["Subscriptions", 'Sales', "purchases", "Advertisements", "User Support"];
    useEffect(() => {
   let filteredBy = tableData.filter(item =>
@@ -176,14 +175,14 @@ const ITEM_HEIGHT = 48;
       </div>
       <div className='Revunes-chart'>
         <div className='Revunes-chart-victory' >
-          <div className='VictoryContainer-Revunes'>
+          <div className='VictoryContainer-Revunes statics'>
         <h3 >Revenue Statistics</h3>
             <StaticsVector  typeBar={"$"} data={[0, 50000, 40000, 1000, 60000, 10000, 30000, 60000, 40000, 50000, 11000, 1000]} />
           </div>
-          <div className='VictoryContainer-Revunes' >
+          <div className='VictoryContainer-Revunes radar' >
         <h3 >Sources of income Statistics</h3>
             <RadarChart 
-            
+              
               data1={[0, 50, 100, 300, 600, 400, 1100, 100]} 
               data2={[0, 40, 50, 800, 120, 280, 480, 1080, 120]} 
               label={radarLabels} 
@@ -192,7 +191,7 @@ const ITEM_HEIGHT = 48;
         </div>
       </div>
     
-          <div className="p-4">
+          <div className="">
              <div className="table-header">
       <h3 className="Rvuenes-table">Revenue Table</h3>
       <div className='searchContainer'>

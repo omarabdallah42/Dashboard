@@ -110,7 +110,7 @@ const RadarChart = ({ label, data1, data2 }) => {
   };
 
   return (
-    <div className="chart-container" style={containerStyle}>
+    <div  className="chart-container" style={containerStyle}>
       <Radar  style={titleStyle} data={data} options={options} />
     </div>
   );

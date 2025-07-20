@@ -103,7 +103,7 @@ export default function GeneralStatistics({ data , title, value, Growth, icon })
        
 
           <div style={{ width: 80, height: 60 ,display:'flex',justifyContent:'center',alignItems:'center'}} >
-            <Line data={chartData} options={chartOptions} />
+            <Line  data={chartData} options={chartOptions} />
           </div>
         </div>}
       </div>

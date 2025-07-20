@@ -19,7 +19,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
 export default function LineChart() {
 
   const labels = [" A", "Page B", "Page C", "Page D", "Page E", "Page F"];
@@ -77,7 +76,7 @@ export default function LineChart() {
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
-      <Line data={data} options={options} />
+      <Line  data={data} options={options} />
     </div>
   );
 }

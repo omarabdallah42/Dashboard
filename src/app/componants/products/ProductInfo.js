@@ -13,6 +13,7 @@ const ProductInfoDialog = ({ typeEdite, open, onClose, onSave, ItemEdite }) => {
     { src: '/pngwing.com (13).png' },
     { src: '/pngwing.com (14).png' },
     { src: '/pngwing.com (15).png' },
+
   ]);
   const [itemEditValue, setItemEditValue] = useState({
     user: Admaininfo.name,
