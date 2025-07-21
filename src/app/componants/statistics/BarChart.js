@@ -109,7 +109,7 @@ const options = {
       labels: {
         usePointStyle: true,
         font: {
-          size: 13,
+          size: 20,
           weight: "bold",
         },
         color: "#334155",
@@ -151,7 +151,7 @@ const options = {
       ticks: {
         color: "#94a3b8",
         font: {
-          size: 11,
+          size: 15,
           weight: "bold",
         },
         stepSize: 2,
@@ -168,7 +168,7 @@ const options = {
 };
 
 const GrowthChart = () => (
-  <div className="ChartContainer max-w-3xl mx-auto p-4 bg-white rounded-xl shadow-md">
+  <div className="ChartContainer ">
     <h2>Growth</h2>
     <Chart type="bar" data={data} options={options} />
   </div>

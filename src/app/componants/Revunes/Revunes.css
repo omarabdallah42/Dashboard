@@ -178,7 +178,7 @@
     height: 380px;
   }
 }
-@media screen and (max-width:780px) {
+@media screen and (max-width:980px) {
   .Revunes-chart-victory{
     flex-direction: column;
   }
@@ -212,4 +212,61 @@
     flex-direction: column;
   }
 
+}
+@media screen and (max-width:600px) {
+  .table {
+    overflow-x: auto;
+    padding: 5px;
+    font-size: 13px;
+  }
+  .table thead {
+    display: none;
+  }
+  .table tbody {
+    gap: 0;
+  }
+  .table tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ffffff1a;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 10px 8px;
+    background: rgba(255,255,255,0.01);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .table td {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    position: relative;
+    font-size: 14px;
+  }
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    min-width: 110px;
+    color: #90caf9;
+    margin-right: 8px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .img {
+    width: 38px;
+    height: 38px;
+  }
+  .text-state {
+    width: auto;
+  }
+  .Rvuenes-table {
+    font-size: 16px;
+    padding: 6px;
+  }
+  .searchContainer {
+    width: 100%;
+  }
 }

@@ -44,7 +44,6 @@ export default function GeneralStatistics({ data , title, value, Growth, icon })
    }
   }, [data, Growth]);
   const chartData = useMemo(() => {
-    // بيانات فيها طلوع ونزول
     const baseData = data;
 
     let adjustedData;
@@ -109,4 +108,4 @@ export default function GeneralStatistics({ data , title, value, Growth, icon })
       </div>
     </div>
   );
-}
+};

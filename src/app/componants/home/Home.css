@@ -79,7 +79,7 @@
     flex-direction: column;
 }
 .generalStatisticsCard{
-    width:250px;
+    width:23%;
     background-color: #1a1a1a;
     color: white;
     display: flex;
@@ -201,38 +201,93 @@
     gap: 20px;
     height: 435px;
     border-radius: 20px;
-    padding-top: 10px ;
+    padding: 20px ;
     border: 1px solid #ffffff1a;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 .Home-map div{
     width: 100%;
     height: 100% !important;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-
+@media screen and (max-width:5000px) and (min-width:2000px) {
+    .radar{
+        width: 50%;
+        height: 1050px;
+    }
+    .Home-map{
+        width: 50%;
+    }
+    .Home-chart-bar-Line{
+        width: 50%;
+    }
+    .generalStatisticsCard{
+        padding: 30px;
+    }
+    .statisticsHeader h4{
+        font-size: 30px;
+    }
+    .statisticsHeader svg{
+        width: 40px;
+        height: 40px;
+    }
+    .statisticsValue p{
+        font-size: 50px;
+    }
+    .growthIcon svg{
+        width: 50px;
+        height: 50px;
+    }
+    .growthIcon span{
+        font-size: 40px;
+    }
+    .vector ,.radar{
+        padding: 50px;
+    }
+    .vector h3 , .radar h3 {
+        font-size: 40px;
+    }
+    .Chart{
+        font-size: 40px !important;
+    }
+    .Home-chart-bar-Line{
+        width: 60%;
+        height: 900px;
+        font-size: 40px;
+    }
+    .Home-map{
+        padding: 50px;
+        font-size: 40px;
+        width: 50%;
+        height: 900px;
+    }
+}
 @media (max-width: 1200px) {
     .Home-header {
         flex-wrap: wrap;
         gap: 15px;
     }
     .generalStatisticsCard {
-        width: 300px;
-        padding: 15px;
+        width: 40%;
+        padding: 20px;
     }
     .Home-chart {
         gap: 15px;
     }
-    
-   
+    .radar{
+        width: 50%;
+    }
+
+    .Home-map{
+        width: 50%;
+    }
+    .Home-chart-bar-Line{
+        width: 50%;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .header {
         flex-direction: column;
         height: auto;
@@ -311,13 +366,20 @@
         width: 100% ;
         max-width: 100%;
     }
+    .radar{
+        width: 100%;
+        height: 100%;
+    }
+
     .Home-chart{
         flex-direction: column;
     }
     .statisticsValue p {
         font-size: 18px;
     }
-    
+    .Home-chart-bar-Line{
+        display: none;
+    }
     .Home-chart-victory {
         padding: 15px;
     }

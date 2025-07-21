@@ -10,6 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import '../home/Home.css';
 import { Radar } from "react-chartjs-2";
 
 ChartJS.register(
@@ -101,7 +102,7 @@ const RadarChart = ({ label, data1, data2 }) => {
     color: "#fff",
     textAlign: "center",
     marginBottom: "16px",
-    fontSize: "20px",
+    fontSize: "100px",
     fontWeight: "600",
     height: "40%",
     display: "flex",
@@ -111,7 +112,7 @@ const RadarChart = ({ label, data1, data2 }) => {
 
   return (
     <div  className="chart-container" style={containerStyle}>
-      <Radar  style={titleStyle} data={data} options={options} />
+      <Radar className="Chart" style={titleStyle} data={data} options={options} />
     </div>
   );
 };

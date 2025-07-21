@@ -27,7 +27,7 @@ export default function LineChart() {
 
     datasets: [
       {
-        label: "القيمة A",
+        label: "value A",
         data: [0, 100, 400, 4005, 5000000, 6000],
         borderColor: "#4bc0c0",
         backgroundColor: "#4bc0c033",
@@ -41,7 +41,7 @@ export default function LineChart() {
         pointHoverBackgroundColor: "#4bc0c0",
       },
       {
-        label: "القيمة B",
+        label: "value B",
         data: [0, 106, 423, 312, 451, 623],
         borderColor: "#ff6384",
         backgroundColor: "#ff638433",

@@ -87,20 +87,20 @@ const ITEM_HEIGHT = 48;
   const showData = finalData.map((item, index) => {
     return(
     <tr key={index}>
-       <td><p className="">{item.user}</p></td>
+       <td data-label="UserName"><p className="">{item.user}</p></td>
 
-<td>
+<td data-label="UserPhoto">
  <div className="img">
  <img
     src={item.src}
     alt="avatar"
   /> </div>
 </td>
- <th style={{display:"flex",justifyContent:'center',alignItems:'center'}}>{item.type}</th>
-      <td>{item.money}$</td>
-      <td> <p className="text-state">{item.state}</p></td>
-      <td>{item.time}</td>
-      <td >   
+ <th data-label="type" style={{display:"flex",justifyContent:'center',alignItems:'center'}}>{item.type}</th>
+      <td data-label="Cost">{item.money}$</td>
+      <td data-label="state"> <p className="text-state">{item.state}</p></td>
+      <td data-label="Time">{item.time}</td>
+      <td data-label=" ">   
       <IconButton
         aria-label="more"
         id="long-button"

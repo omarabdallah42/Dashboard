@@ -49,13 +49,15 @@ export default function Home() {
         </div>
         <div className='Home-chart-victory radar'>
           <h3>Statistics </h3>
-        <RadarChart  data1={[0,200,400,600,800,400]} data2={[0,80, 900 ,100, 300, 600, 400,500,1100, 1000]} label={["Products", "Revenues", "Orders", "Completed Deals", "Visitors", "Customers"]}></RadarChart>
+        <RadarChart  data1={[0,200,400,600,800,600]} data2={[600,200,400,900,800,900]} label={["Products", "Revenues", "Orders", "Completed Deals", "Visitors", "Customers"]}></RadarChart>
         </div>
       </div>
       <div className='chart-bar'>
+
         <div className='Home-chart-bar-Line'>
       <BarCharts ></BarCharts>
-      </div>
+              </div>
+
       <div className='Home-map'>
         <h3>visitors countries</h3>
         <Maps />
