@@ -10,7 +10,7 @@
 
 .Revunes-header { 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .Revunes-chart-victory{
@@ -45,6 +45,7 @@
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
+  min-width: 1000px;
   border: 1px solid rgba(255, 255, 255, 0.39);
   border-radius: 10px;
   padding: 20px;
@@ -62,6 +63,9 @@
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #ffffff1a;
+}
+.table tr:last-child {
+  border-bottom: none;
 }
 /* تنسيق الأعمدة */
 .table th,
@@ -190,10 +194,7 @@
     width: 100%;
     height: 100%;
   }
-  .table{
-    display: flex;
-    flex-direction: column;
-  }
+ 
 }
 @media screen and (max-width:380px) {
   .Revunes-chart-victory{
@@ -206,67 +207,46 @@
     .radar{
     width: 100%;
     height: 100%;
+        font-size: 13px;
+
   }
-  .table{
-    display: flex;
+  .radar canvas{
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 20px;
+  }
+  
+  
+}
+.table-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* عند الشاشات الصغيرة نخلي العناصر تتحط تحت بعض */
+@media screen and (max-width: 768px) {
+  .table-header {
     flex-direction: column;
+    align-items: stretch;
   }
 
-}
-@media screen and (max-width:600px) {
-  .table {
-    overflow-x: auto;
-    padding: 5px;
-    font-size: 13px;
-  }
-  .table thead {
-    display: none;
-  }
-  .table tbody {
-    gap: 0;
-  }
-  .table tr {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid #ffffff1a;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    padding: 10px 8px;
-    background: rgba(255,255,255,0.01);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  }
-  .table td {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    padding: 4px 0;
-    position: relative;
-    font-size: 14px;
-  }
-  .table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    min-width: 110px;
-    color: #90caf9;
-    margin-right: 8px;
-    font-size: 13px;
-    flex-shrink: 0;
-  }
-  .img {
-    width: 38px;
-    height: 38px;
-  }
-  .text-state {
-    width: auto;
-  }
   .Rvuenes-table {
-    font-size: 16px;
-    padding: 6px;
+    text-align: center;
+    width: 100%;
   }
+
   .searchContainer {
     width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .table-icon {
+    width: 100%;
+    justify-content: center;
   }
 }

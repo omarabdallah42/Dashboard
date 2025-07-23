@@ -104,7 +104,7 @@ const RadarChart = ({ label, data1, data2 }) => {
     marginBottom: "16px",
     fontSize: "100px",
     fontWeight: "600",
-    height: "40%",
+    height: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

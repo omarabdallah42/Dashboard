@@ -73,7 +73,6 @@ export default function ProductsTable() {
 
   return (
     <div className='products'>
-      {/* إحصائيات المنتجات */}
       <div className='Home-header'>
         <GeneralStatistics icon={faBoxes} title='Total Products' value='5000' data={[]} />
         <GeneralStatistics icon={faPeopleCarryBox} title='Completed Orders' value='3,234' data={[]} />
@@ -81,10 +80,8 @@ export default function ProductsTable() {
         <GeneralStatistics icon={faBox} title='Inactive products' value='700' data={[]} />
       </div>
 
-      {/* المنتجات الأعلى */}
       <TopProducts />
 
-      {/* جدول المنتجات */}
       <div className='product-table'>
         <div className='table-header'>
           <h3>Products Table</h3>
@@ -121,8 +118,8 @@ export default function ProductsTable() {
             </Box>
           </div>
         </div>
+          <div className="containerTable">
 
-        {/* جدول المنتجات الصحيح */}
         <table className='table'>
           <thead>
             <tr>
@@ -180,6 +177,7 @@ export default function ProductsTable() {
             ))}
           </tbody>
         </table>
+          </div>
 
       </div>
     </div>

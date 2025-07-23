@@ -11,19 +11,27 @@
     align-items: center;
     margin-bottom: 20px;
 }
+.containerTable{
+    max-width: 100000px ;
+    overflow: auto;
+}
 .table {
-  width: 100%;
+    width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 1000px ;
   border: 1px solid rgba(255, 255, 255, 0.39);
   border-radius: 10px;
   padding: 10px;
+  overflow: auto;
 }
 
 .table thead,
 .table tbody {
-  width: 100%;
+    min-width: 1000px ;
+  overflow: auto;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -138,17 +146,7 @@
 .searchContainer svg{
     color: #ffffff9a;
 }
-.table{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.39);
-    border-radius: 10px;
-    padding: 20px;
-}
+
 .buttons{
     display: flex;
     justify-content: center;
@@ -238,4 +236,14 @@
 .more{
     width:20px !important;
     height: 20px !important;
+}
+@media screen and (max-width: 500px) {
+    .table-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .searchContainer {
+        width: 100%;
+        padding:  2px;
+    }
 }

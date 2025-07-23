@@ -1,12 +1,12 @@
 "use client"
-import React, { useState ,useEffect} from 'react'
+import React, { useState } from 'react'
 import TopProductCard from './TopProductCard'
 import './TopProductCard.css'
 import ProductInfoDialog from './ProductInfo';
 import Snackbar from '@mui/material/Snackbar';
-import {Products} from '../../store/productsState'
+import {Products} from '../../store/productsState';
 export default function TopProducts() {
-  const { products, ActiveAlert,SetActiveAlert} = Products();
+  const { products, ActiveAlert} = Products();
   const [open, setOpen] = useState(false);
   const [ItemEdite,SetItemEdite]  = useState({
     src: '/pngwing.com (12).png',
@@ -21,9 +21,8 @@ export default function TopProducts() {
           message={ActiveAlert.message}
           anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
           key={ActiveAlert.message}/>
-      {/* تمرر open و onClose بشكل صحيح */}
       <ProductInfoDialog typeEdite='add' ItemEdite={ItemEdite}  open={open} onClose={() => setOpen(false)}  />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' ,alignItems:'center'}}>
         <h2>Top Products</h2>
         <button  onClick={() => {setOpen(true)
         SetItemEdite({

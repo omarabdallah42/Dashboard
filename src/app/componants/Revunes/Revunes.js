@@ -62,7 +62,7 @@ const ITEM_HEIGHT = 48;
     { src:"/customer4.jpeg",type:'Seller' ,user: "Mohammed", money: 350, icon: faUserAlt, state: "Returning User", time: "2023-6-7" },
   ];
 
-  const radarLabels = ["Subscriptions", 'Sales', "purchases", "Advertisements", "User Support"];
+  const radarLabels = ["Subscriptions", 'Sales', "purchases", "advert", "Support"];
    useEffect(() => {
   let filteredBy = tableData.filter(item =>
     item.user.toLowerCase().includes(search.toLowerCase())
@@ -143,7 +143,7 @@ const ITEM_HEIGHT = 48;
   // Sort Data
   return (
     <div className='Revunes'>
-      <div className='Revunes-header' style={{ display: "flex", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
+      <div className='Revunes-header' style={{ width:"100%",display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" ,alignItems:"center"}}>
         <GeneralStatistics 
           Growth={100} 
           data={[0, 100, 300, 600, 400, 1000]} 
@@ -182,7 +182,6 @@ const ITEM_HEIGHT = 48;
           <div className='VictoryContainer-Revunes radar' >
         <h3 >Sources of income Statistics</h3>
             <RadarChart 
-              
               data1={[0, 50, 100, 300, 600, 400, 1100, 100]} 
               data2={[0, 40, 50, 800, 120, 280, 480, 1080, 120]} 
               label={radarLabels} 
@@ -219,6 +218,7 @@ const ITEM_HEIGHT = 48;
     </Box>
       </div>
   </div>
+  <div style={{ overflow: "auto" ,width:"100%" }}>
 <div className="table">
   <thead>
     <tr>
@@ -235,6 +235,8 @@ const ITEM_HEIGHT = 48;
     {showData}
   </tbody>
 </div>
+  </div>
+
     </div>
       </div>
   );
