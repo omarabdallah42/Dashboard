@@ -1,6 +1,7 @@
 "use client";
 import React from 'react'
 import './settings.css';
+import Image from 'next/image';
 import {useState,useEffect,useRef} from 'react';
 import ProfileHeaderSettings from './Profile Header Settings';
 import { useProfileStore } from '../../store/profile';
@@ -58,7 +59,7 @@ const handleFileChange = (e) => {
     <div className='settings-profile'>
       <div className='settings-profile-img' style={{ position:'relative' }}>
    <div className='settings-profile-img' style={{position:'relative'}} onClick={handleImgClick}>
-  <img src={profileImg} alt='Profile' className='img' style={{cursor:'pointer'}} />
+  <Image width={50} height={50} src={profileImg} alt='Profile' className='img' style={{cursor:'pointer'}} />
   <input
     type='file'
     accept='image/*'
@@ -83,17 +84,17 @@ const handleFileChange = (e) => {
   type='Profile'
 />
        <div className='settings-profile-info'>
-        <div>
+        <div className='Settings-content'>
    <div className='Input'>
              <p> Name</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
+      sx={ { m: 1, height:"50px"  }}
       noValidate
       autoComplete="off"
     >
       <TextField
           id="outlined-multiline-flexible"
-          sx={{'& > :not(style)':{height:"100%",color:'white',borderRadius:"10px"}}}
+          sx={{height:"100%",color:'white',borderRadius:"10px"}}
           label="Name"
           inputProps={{ maxLength: 10 }}
           maxRows={4}
@@ -105,7 +106,7 @@ const handleFileChange = (e) => {
             <div className='Input'>
              <p>Role</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
+      sx={ { m: 1, height:"50px"  }}
       noValidate
       autoComplete="off"
       
@@ -113,27 +114,26 @@ const handleFileChange = (e) => {
       <TextField
           disabled
           id="outlined-multiline-flexible"
-          sx={{'& > :not(style)':{height:"100%",color:'white',borderRadius:"10px"}}}
+          sx={{height:"100%",color:'white',width:'50%',borderRadius:"10px"}}
           label={ProfileEdit.role}
           maxRows={4}      
           />
         </Box>
         </div>      
         </div>
-      <div>
+      <div className='Settings-content'>
     <div className='Input'>
              <p>Email</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
+      sx={{ m: 1, height:"50px" }}
       noValidate
       autoComplete="off"
     >
       <TextField
           value={ProfileEdit.email}
           id="outlined-multiline-flexible"
-          sx={{'& > :not(style)':{height:"100%",color:'white',borderRadius:"10px"}}}
+          sx={{height:"100%",color:'white',borderRadius:"10px"}}
           label="Email"
-          maxRows={4}
           onChange={ (e) => setProfileEdite({...ProfileEdit,email:e.target.value})}
         />
         </Box>
@@ -141,13 +141,13 @@ const handleFileChange = (e) => {
            <div className='Input'>
              <p>Phone</p>
         <Box
-      sx={{ '& > :not(style)': { m: 1, height:"50px" } }}
+      sx={{ m: 1, height:"50px" }}
       noValidate
       autoComplete="off"
     >
       <TextField
           id="outlined-multiline-flexible done"
-          sx={{'& > :not(style)':{height:"100%",color:'white',borderRadius:"10px"}}}
+          sx={{height:"100%",color:'white',borderRadius:"10px"}}
           label="Phone"
           value={ProfileEdit.phone}
           onChange={(e) => setProfileEdite({...ProfileEdit,phone:e.target.value})}

@@ -9,7 +9,7 @@
     padding: 20px;
 }
 .settings-Content{
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;    
     min-height: 100vh;
@@ -20,7 +20,7 @@
     border-radius: 10px;
 }
 .settings-Overlay{
-    width: 300px;
+    width: 20%;
     background-color: #181717;
     color: white;
     height: 100%;   
@@ -152,8 +152,8 @@
     height: 100%;
     min-width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     gap: 20px;
 }
 .Main-Info{
@@ -172,7 +172,7 @@
     justify-content: space-between;
 }
 .MuiInputBase-root {
-    width: 200px;
+    width: 25%;
     height: 40px;
 }
 .Theme-Settings-buttons{
@@ -270,8 +270,9 @@
 .security-options{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
+    gap: 20px;
 }
 .securityUserId{
     display: flex;
@@ -279,6 +280,84 @@
     flex-direction: column;
 }
 .securityPassword{
+/* Responsive Design Improvements */
+@media screen and (max-width: 1200px) {
+  .settings-profile-info {
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+  }
+  .Settings-content {
+    min-height: unset;
+    padding: 20px;
+  }
+  .settings-profile-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .settings-profile {
+    gap: 30px;
+    padding: 15px 5px;
+  }
+  .settings-Overlay{
+    width: 100%;
+  }
+  .settings-profile-img {
+    width: 90px;
+    height: 90px;
+  }
+  .settings-profile-info {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  .Settings-content {
+    padding: 10px;
+    gap: 20px;
+    border-radius: 8px;
+  }
+  .Theme-Settings-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Settings-buttons button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+  .AboutWebisite textarea {
+    font-size: 15px;
+    padding: 10px;
+    min-height: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .settings-profile {
+    gap: 15px;
+    padding: 5px 2px;
+  }
+  .settings-profile-img {
+    width: 60px;
+    height: 60px;
+  }
+  .Settings-content {
+    padding: 5px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  .Settings-buttons button {
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+  .AboutWebisite textarea {
+    font-size: 14px;
+    padding: 6px;
+    min-height: 50px;
+  }
+}
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -290,7 +369,7 @@
     gap: 20px;
 }
 .securityPassword div input{
-    width: 200px;
+    width: 100%;
     height: 40px;
     background-color: #19191a;
     border: none;
@@ -316,7 +395,7 @@
     transition: .5s all;
 }
 .nonActive{
-    width: 200px;
+    width: 100%;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -333,7 +412,7 @@
     background-color: #302f2f;
 }
 .isActive{
-    width: 200px;
+    width: 100%;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -341,7 +420,6 @@
     background-color: #1c48c0;
     box-shadow: 0 0 50px rgba(28, 72, 192, 0.363);
     border-radius: 10px;
-    padding: 20px;
     color: #FFFFFF;
     padding: 5px;
     border: none;
@@ -351,14 +429,81 @@
 .MuiInputBase-root{
     border:1px solid #fff !important;
 }
-.Input{
-    display: grid;
-    place-items: center;
-    grid-template-columns: 2fr 4fr;
-}
+
 .MuiFormLabel-root{
     color: #ffffffa6 !important;
 }
 .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
     color: #fff !important;   
+    width: 50%;
+}
+.Settings-content{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.Input{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border-radius: 50px;
+    flex-direction: column;
+}
+.MuiBox-root ,.MuiInputBase-root ,.MuiFormControl-root{
+    width: 100% !important;
+    height: 50px !important;
+    border-radius: 10px !important;
+    background-color: #19191a !important;
+}
+@media screen and (max-width:1100px) {
+    .settings-Overlay{
+        width: 40% ;
+    }
+}
+@media screen and (max-width:800px) {
+    .settings{
+        flex-direction: column;
+    }
+    .settings-Overlay{
+        width: 100%;
+        min-height: 50vh;
+    }
+    .settings-profile-info{
+        flex-direction: column;
+    }
+    .Settings-content{
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .Settings-Content-Header{
+        font-size: 20px;
+        width: 100%;
+         justify-content: center;
+        align-items: center;
+    }
+    .settings-Content-Header h2{
+        font-size: 20px;
+    }
+    .settings-Content-Header p{
+        font-size: 16px;
+    }
+    .settings-2fa{
+        flex-direction: column;
+    }
+    .settings-2fa div{
+        width: 100%;
+    }
+    .security-options{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .securityUserId, .securityPassword{
+        width: 100%;
+    }
+    .securityPassword div{
+        flex-direction: column;
+    }
 }

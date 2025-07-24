@@ -57,7 +57,6 @@ export default function Home() {
         <div className='Home-chart-bar-Line'>
       <BarCharts ></BarCharts>
               </div>
-
       <div className='Home-map'>
         <h3>visitors countries</h3>
         <Maps />

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import './Home.css';
+import './Home.css'; 
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import {useState,useEffect} from 'react';

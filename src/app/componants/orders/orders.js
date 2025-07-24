@@ -174,6 +174,8 @@ export default function Orders() {
           </Box>
         </div>
       </div>
+      <div className="table-container">
+
       <table className="table">
         <thead>
           <tr>
@@ -193,6 +195,8 @@ export default function Orders() {
           {showData}
         </tbody>
       </table>
+            </div>
+
     </div>
   );
 }

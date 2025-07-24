@@ -64,7 +64,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  
     height: 70px;
 }
 
@@ -81,28 +80,25 @@
     border-radius: 10px;
     display: flex;
     gap: 15px;
-    position: fixed;
     padding: 20px;
-    z-index: 999;
     height: 80%;
-
-}
-
-.ProductInfo-Image{
-    width: 40%;   
-
+    min-width: 70%;
+    min-height: 70%;
+    overflow: auto;
+    position: fixed;
 }
 .ProductInfo-Details{
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     min-width: 60%;
     max-width: 60%;
     height: 100%;
     border-radius: 10px;
     padding: 10px;
+    gap: 50px;
 }
 .ProductInfo-Details-show-inputs{
     width: 100%;
@@ -196,7 +192,7 @@
 }
 .ProductInfo-Image{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     flex-direction: column;
@@ -278,5 +274,108 @@
 @media screen and (max-width:500px) {
     h2{
         font-size: 20px;
+    }
+    .ProductInfo{
+        display: flex;
+      flex-direction: column-reverse; 
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        width: 100%;
+        height: 100% !important;
+        position: fixed;
+        z-index: 99;
+        min-height: 100%;
+        max-height: 100%;
+        overflow: auto;
+
+    }
+    .ProductInfo-Image{
+        width: 100%;
+        height: 50%;
+        z-index: 888;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 2px;
+        margin-left: 0px !important;
+        max-width: 100%;
+        min-height: 40%;
+    }
+    .ProductInfo-Details{
+        width: 100%;
+        height: 30%;
+        max-width: 100%;
+        min-height: 60%;
+        align-items: center;
+        gap: 1px;
+        justify-content: center;
+    }
+    .ProductInfo-Details-show-inputs{
+        width: 100%;
+    }
+    .MuiInputBase-input{
+        width: 50% !important;
+    
+    }
+    .inputs{
+        width: 100% !important;
+    }
+    
+    .MuiInputBase-input::placeholder{
+        font-size: 10px !important;
+    }
+    .ProductInfo-Details-show-categories{
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .ProductInfo-Buttons{
+        width: 100%;
+        justify-content: center;
+    }
+    .ProductInfo-Buttons button{
+        width: 80px;
+    }
+    .Title{
+        width: 100%;
+    }
+    .Title h2{
+        font-size: 14px;
+    }
+    .TextArea{
+        width: 100%;
+    }
+    .TextArea textarea{
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+    }
+    .ProductInfo-Details-show-inputs label{
+        font-size: 14px;
+    }
+    .TextArea h2{
+        font-size: 14px;
+    }
+    .Main-Image{
+        width: 100%;
+        height: 150px;
+    }
+    .Sub-Images{
+        width: 100%;
+        gap: 10px;
+        margin-top: 0px !important;
+    }
+    .Sub-Images div{
+        margin: 0px !important;
+        width: 30%;
+        height: 70px;
+    }
+    .ProductInfo-Buttons{
+ 
+        width: 100%;
+        padding: 10px;
+        z-index: 9999;
+        margin-bottom: 60px;
     }
 }

@@ -81,15 +81,15 @@ const handleFileChange = (e) => {
               />
       <ProfileHeaderSettings IsSave={!isSave} data={websiteInfo} type="Website" />
       <div className='settings-profile-info'>
-        <div>
+        <div className='Settings-content'>
           <div className='Input'>
             <p>Domain Name</p>
-            <Box sx={{ '& > :not(style)': { m: 1, height: "50px", width: '25ch' } }}>
+            <Box sx={ { m: 1, height: "50px"  }}>
               <TextField
                 id="outlined-domain"
                 label="Domain"
                 inputProps={{ maxLength: 20 }}
-                sx={{ '& > :not(style)': { height: "100%", color: 'white', borderRadius: "10px" } }}
+                sx={ { height: "100%", color: 'white', borderRadius: "10px"  }}
                 value={websiteInfo.domainName}
                 onChange={(e) => SetWebsitInfo({ ...websiteInfo, domainName: e.target.value })}
               />
@@ -97,24 +97,24 @@ const handleFileChange = (e) => {
           </div>
           <div className='Input'>
             <p>Role</p>
-            <Box sx={{ '& > :not(style)': { m: 1, height: "50px", width: '25ch' } }}>
+            <Box sx={ { m: 1, height: "50px" } }>
               <TextField
                 disabled
                 id="outlined-role"
                 label={websiteInfo.role}
-                sx={{ '& > :not(style)': { height: "100%", color: 'white', borderRadius: "10px" } }}
+                sx={{ height: "100%", color: 'white', borderRadius: "10px"  }}
               />
             </Box>
           </div>
         </div>
-        <div>
+        <div className='Settings-content'>
           <div className='Input'>
             <p>Support Email</p>
-            <Box sx={{ '& > :not(style)': { m: 1, height: "50px", width: '25ch' } }}>
+            <Box sx={ { m: 1, height: "50px" }}>
               <TextField
                 id="outlined-email"
                 label="Email"
-                sx={{ '& > :not(style)': { height: "100%", color: 'white', borderRadius: "10px" } }}
+                sx={ { height: "100%", color: 'white', borderRadius: "10px"  }}
                 value={websiteInfo.email}
                 onChange={(e) => SetWebsitInfo({ ...websiteInfo, email: e.target.value })}
               />
@@ -122,11 +122,11 @@ const handleFileChange = (e) => {
           </div>
           <div className='Input'>
             <p>Support Phone</p>
-            <Box sx={{ '& > :not(style)': { m: 1, height: "50px", width: '25ch' } }}>
+            <Box sx={ { m: 1, height: "50px" }}>
               <TextField
                 id="outlined-phone"
                 label="Phone"
-                sx={{ '& > :not(style)': { height: "100%", color: 'white', borderRadius: "10px" } }}
+                sx={ { height: "100%", color: 'white', borderRadius: "10px"  }}
                 value={websiteInfo.phone}
                 onChange={(e) => SetWebsitInfo({ ...websiteInfo, phone: e.target.value })}
               />

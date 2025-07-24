@@ -46,12 +46,9 @@ export default function Orders() {
     { src:"/customer4.jpeg", type:'Customer',  user: "Mohammed", money: "350$",  rate:5, state: "VIP", time: "2025:6:07" },
   ];
 
-  // Filtering by search
   let filteredData = tableData.filter(item =>
     item.user.toLowerCase().includes(search.toLowerCase())
   );
-
-  // Filtering by dropdown
   if (FilterValue === 'Oldest') {
     filteredData = filteredData.slice().sort((a, b) => new Date(a.time) - new Date(b.time));
   } else if (FilterValue === 'Newest') {
@@ -203,6 +200,8 @@ const ITEM_HEIGHT = 48;
           </Box>
         </div>
       </div>
+      <div className='table-container'>
+
       <table className="table">
           {showData.length > 0 &&  <thead>
         
@@ -222,6 +221,8 @@ const ITEM_HEIGHT = 48;
           {showData}
         </tbody>
       </table>
+            </div>
+
     </div>
   );
 }

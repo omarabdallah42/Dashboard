@@ -51,7 +51,7 @@ body {
 .input-container input {
   flex: 1;
   border: none;
-  background-color: transparent;
+  background-color: #0C0C0C;
   color: #FFFFFF;
   font-size: 16px;
   outline: none;
@@ -146,7 +146,7 @@ body {
 }
 
 .separator {
-  width: 300px; /* غيّرها لأي عرض تحبه */
+  width: 300px; 
   display: flex;
   align-items: center;
   justify-content: center;
