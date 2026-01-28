@@ -1,0 +1,150 @@
+
+body, .demo-app {
+  font-family: 'Cairo', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.demo-app {
+  display: flex;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.demo-app-sidebar {
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,64,175,0.07);
+  padding: 32px 24px 24px 24px;
+  margin: 32px 0 32px 32px;
+  min-width: 260px;
+  max-width: 320px;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.demo-app-sidebar-section h2 {
+  font-size: 1.2rem;
+  color: #1d4ed8;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.demo-app-sidebar-section ul {
+  padding-left: 18px;
+  margin: 0;
+  color: #334155;
+  font-size: 15px;
+}
+
+.demo-app-sidebar-section label {
+  font-size: 15px;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.demo-app-sidebar-section input[type="checkbox"] {
+  accent-color: #2563eb;
+  margin-right: 7px;
+}
+
+.demo-app-main {
+  flex: 1;
+  margin: 32px 32px 32px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,64,175,0.07);
+  padding: 24px 18px 18px 18px;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* FullCalendar overrides */
+.fc {
+  background: transparent;
+  font-size: 15px;
+}
+.fc-toolbar-title {
+  color: #1d4ed8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.fc-button {
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 600;
+  transition: background 0.18s;
+}
+.fc-button:hover, .fc-button:focus {
+  background: #1d4ed8;
+}
+.fc-daygrid-day.fc-day-today {
+  background: #e0e7ff;
+}
+.fc-event {
+  background: #2563eb;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.08);
+  padding: 2px 6px;
+}
+.fc-event:hover {
+  background: #1d4ed8;
+}
+.fc-daygrid-event-dot {
+  border-color: #2563eb;
+}
+.fc-daygrid-block-event .fc-event-title {
+  white-space: normal;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .demo-app {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .demo-app-sidebar {
+    margin: 24px 24px 0 24px;
+    max-width: 100%;
+    min-width: 0;
+    width: auto;
+  }
+  .demo-app-main {
+    margin: 24px;
+    padding: 12px 4px 4px 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .demo-app-sidebar {
+    padding: 16px 8px 12px 8px;
+    margin: 12px 6px 0 6px;
+    border-radius: 10px;
+  }
+  
+  .demo-app-main {
+    margin: 8px 4px 8px 4px;
+    border-radius: 10px;
+    padding: 4px 0 0 0;
+  }
+  .fc-toolbar-title {
+    font-size: 15px !important;
+  }
+  .fc-button-group{
+    gap: 4px !important;
+  }
+  .fc-toolbar-chunk{
+    gap: 4px !important;
+  }
+  .fc-header-toolbar{
+    flex-direction: column !important;
+    align-items: center;
+  }
+}

@@ -3,136 +3,97 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  BarElement,
-  BarController,
-  LineElement,
-  LineController,
   PointElement,
-  Legend,
+  LineElement,
+  Title,
   Tooltip,
-  Filler,
+  Legend,
 } from "chart.js";
-
-
-import { Chart } from "react-chartjs-2";
-
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  BarElement,
-  BarController,
-  LineElement,
-  LineController,
   PointElement,
-  Legend,
+  LineElement,
+  Title,
   Tooltip,
-  Filler
+  Legend
 );
 
-const labels = ["Week 1", "Week 2", "Week 3", "Week 4"];
+const labels = ["January", "February", "March", "April", "May", "June"];
 
 const data = {
   labels,
   datasets: [
     {
-      type: "bar",
-      label: "Week 1",
-      data: [5.75, 0, 0, 0],
-      backgroundColor: "#2563eb",
-      stack: "week1",
-      grouped: false,
-      borderRadius: 5,
-      barPercentage: 0.45,
-      categoryPercentage: 0.5,
-    },
-    {
-      type: "bar",
-      label: "Week 2",
-      data: [0.5, 10, 14.5, 0],
-      backgroundColor: "#3b82f6",
-      stack: "week2",
-      grouped: false,
-      borderRadius: 5,
-      barPercentage: 0.45,
-      categoryPercentage: 0.5,
-    },
-    {
-      type: "bar",
-      label: "Week 3",
-      data: [0, 0, 13, 0],
-      backgroundColor: "#60a5fa",
-      stack: "week3",
-      grouped: false,
-      borderRadius: 5,
-      barPercentage: 0.45,
-      categoryPercentage: 0.5,
-    },
-    {
-      type: "bar",
-      label: "Week 4",
-      data: [0, 0, 0, 16],
-      backgroundColor: "#93c5fd",
-      stack: "week4",
-      grouped: false,
-      borderRadius: 5,
-      barPercentage: 0.45,
-      categoryPercentage: 0.5,
-    },
-    {
-      type: "line",
-      label: "Growth Rate",
-      data: [6, 11, 15, 16],
-      borderColor: "#334155",
-      backgroundColor: "rgba(51, 65, 85, 0.10)",
+      label: "Sales 2024",
+      data: [3, 6, 4, 8, 7, 20],
+      borderColor: "#1d4ed8", 
+      backgroundColor: "rgba(29, 78, 216, 0.15)",
+      borderWidth: 3,
+      tension: 0.4,
       fill: true,
-      borderWidth: 2.5,
-      tension: 0.35,
       pointBackgroundColor: "#fff",
-      pointBorderColor: "#334155",
+      pointBorderColor: "#1d4ed8",
       pointRadius: 6,
       pointHoverRadius: 8,
-      order: 0,
+    },
+    {
+      label: "Sales 2025",
+      data: [2, 4, 6, 5, 9, 12],
+      borderColor: "#16a34a", // Vivid green
+      backgroundColor: "rgba(22, 163, 74, 0.15)",
+      borderWidth: 3,
+      tension: 0.4,
+      fill: true,
+      pointBackgroundColor: "#fff",
+      pointBorderColor: "#16a34a",
+      pointRadius: 6,
+      pointHoverRadius: 8,
+    },
+    {
+      label: "Sales 2026",
+      data: [2, 4, 6, 5, 2, 12],
+      borderColor: "#e11d48", // Strong pink/red
+      backgroundColor: "rgba(225, 29, 72, 0.15)",
+      borderWidth: 3,
+      tension: 0.4,
+      fill: true,
+      pointBackgroundColor: "#000",
+      pointBorderColor: "#e11d48",
+      pointRadius: 6,
+      pointHoverRadius: 8,
     },
   ],
 };
 
 const options = {
   responsive: true,
-  animation: {
-    duration: 900,
-    easing: "easeOutCubic",
-  },
   plugins: {
     legend: {
-      position: "bottom",
+      position: "top",
       labels: {
-        usePointStyle: true,
         font: {
-          size: 20,
+          size: 14,
           weight: "bold",
+          color:'red'
         },
-        color: "#334155",
+        color: "rgba(255, 255, 255, 0.8)",
       },
     },
     tooltip: {
-      mode: "index",
-      intersect: false,
-      backgroundColor: "rgba(241, 245, 249, 0.5)",
-      titleColor: "#1e293b",
-      bodyColor: "#334155",
-      padding: 10,
-      cornerRadius: 6,
+      backgroundColor: "rgba(0, 0, 0, 0.8)",
+      titleColor: "#ffff",
+      bodyColor: "#fff",
+      borderColor: "#2563eb",
+      borderWidth: 1,
     },
-  },
-  interaction: {
-    mode: "index",
-    intersect: false,
   },
   scales: {
     x: {
       ticks: {
-        color: "#64748b",
+        color: "#555",
         font: {
           size: 12,
           weight: "bold",
@@ -141,37 +102,31 @@ const options = {
       grid: {
         display: false,
       },
-      title: {
-        display: false,
-      },
     },
     y: {
-      beginAtZero: true,
-      max: 18,
       ticks: {
-        color: "#94a3b8",
+        color: "#555",
         font: {
-          size: 15,
+          size: 12,
           weight: "bold",
         },
         stepSize: 2,
       },
       grid: {
-        color: "rgba(226, 232, 240, 0.4)",
+        color: "rgba(0,0,0,0.1)",
         borderDash: [4, 4],
-      },
-      title: {
-        display: false,
       },
     },
   },
 };
 
-const GrowthChart = () => (
-  <div className="ChartContainer ">
-    <h2>Growth</h2>
-    <Chart type="bar" data={data} options={options} />
-  </div>
-);
+const MultiLineChart = () => {
+  return (
+    <div className="ChartContainer">
+      <h2>Statics Growth</h2>
+      <Line data={data} options={options} />
+    </div>
+  );
+};
 
-export default GrowthChart;
+export default MultiLineChart;

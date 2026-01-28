@@ -1,221 +1,71 @@
+/* ====== Header & Search ====== */
 .header {
-    width: 100%;
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    margin-top: 10px;
-    box-sizing: border-box;
-}
-.header h3{
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    
-}
-.header input{
-    width: 91%;
-    height: 35px;
-    outline: none;
-    color: white;
-    background-color: transparent;
-    padding: 0 13px;
-    border: none;
-    font-size: 16px;
-}
-
-.searchContainer{
-    width: 50%;
-    display: flex;
-    border-radius: 20px;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #ffffff85;
-    transition: .5s all;
-}
-.searchContainer:HOVER{
-  border: 1px solid rgb(40, 88, 255);  
-    box-shadow: 0 0 60px rgba(40, 88, 255, 0.5);
-}
-.searchContainer svg{
-    color: #ffffff9a;
-}
-.profileContainer{
+  width: 100%;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-top: 10px;
+  box-sizing: border-box;
 }
-.profile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap: 10px;
-}
-.growthIcon{
-    display: flex;
-    gap: 7px;
-    justify-content: center;
-    align-items: center;
-}
-.profile img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: contain;
-}
-.Home{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    min-width: 100%;
-    gap: 10px;
-    padding: 25px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-.generalStatisticsCard{
-    width:23%;
-    background-color: #1a1a1a;
-    color: white;
-    display: flex;
-    border: 1px solid #ffffff1a;
-    border-radius: 25px;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
+.header h3 { color: #fff; font-size: 24px; font-weight: 700; letter-spacing: 1.5px; }
+.header input { width: 91%; height: 35px; outline: none; color: #fff; background: transparent; padding: 0 13px; border: none; font-size: 16px; }
+.searchContainer { width: 50%; display: flex; border-radius: 20px; align-items: center; gap: 10px; border: 1px solid #ffffff85; transition: .5s; }
+.searchContainer:HOVER { border: 1px solid rgb(40,88,255); box-shadow: 0 0 60px rgba(40,88,255,0.5); }
+.searchContainer svg, .header .searchIcon { color: #ffffff9a; width: 18px !important; height: 18px !important; min-width: 18px; min-height: 18px; max-width: 18px; max-height: 18px; display: inline-block; vertical-align: middle; }
+.profileContainer, .profile { display: flex; align-items: center; justify-content: center; gap: 20px; }
+.profile { cursor: pointer; gap: 10px; }
+.profile img { width: 40px !important; height: 40px !important; min-width: 40px; min-height: 40px; max-width: 40px; max-height: 40px; border-radius: 50%; object-fit: cover; aspect-ratio: 1/1; display: block; }
 
-    justify-content: center;
-}
+.Home { width: 100%; min-width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 10px; padding: 25px; }
+.Home-header { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.generalStatisticsCard { width: 23%; background: #1a1a1a; color: #fff; display: flex; flex-direction: column; gap: 30px; padding: 20px; border: 1px solid #ffffff1a; border-radius: 25px; justify-content: center; }
+.statisticsHeader, .statisticsValue, .statisticsGrowth { display: flex; justify-content: space-between; align-items: center; }
+.statisticsValue { font-weight: 700; color: #fff; }
+.statisticsValue p { font-size: 27px; font-weight: 700; color: #fff; }
 
-.Home-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.statisticsHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.statisticsValue{
-    font-weight: 700;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.statisticsValue p{
-    font-size: 27px;
-    font-weight: 700;
-    color: #ffffff;
-}
+.Home-chart { width: 100%; display: flex; gap: 20px; justify-content: center; }
+.Home-chart-victory { border: 1px solid #ffffff1a; border-radius: 25px; padding: 20px; }
+.vector { width: 60%; background: #1a1a1a49; }
+.radar { width: 40%; background: #1a1a1a49; display: flex; flex-direction: column; justify-content: center; height: auto; }
+.Home-chart-victory h3 { color: #fff; font-size: 24px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 20px; }
+.chart-bar { width: 100%; display: flex; justify-content: center; align-items: center; gap: 20px; }
+.Home-chart-bar-Line { width: 60%; border-radius: 20px; height: 435px; padding: 20px; background: #1a1a1a49; border: 1px solid #ffffff1a; }
+.Home-map { width: 40%; display: flex; flex-direction: column; height: 435px; justify-content: center; border-radius: 20px; background: #1a1a1a49; padding: 20px; font-size: 20px; border: 1px solid #ffffff1a; }
+.Home-map div { width: 100%; height: 100% !important; display: flex; justify-content: center; align-items: center; }
+.Home-map div svg { width: 100%; height: 100% !important; }
+
+.w-full { width: 100%; }
+.RadarChart { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: transparent; border-radius: 20px; padding: 20px; box-sizing: border-box; }
+.growthIcon { display: flex; gap: 7px; justify-content: center; align-items: center; }
+.chartSuspense { background: red; }
 
 
-.chartSuspense{
-    background-color: red;
+@media (max-width: 980px) {
+  .header { flex-direction: column; height: auto; gap: 15px; padding: 15px; }
+  .Home-chart, .chart-bar { flex-direction: column; gap: 15px; }
+  .searchContainer, .profileContainer { width: 100%; }
+  .profileContainer { justify-content: space-between; }
+  .Home { padding: 15px; gap: 15px; }
+  .Home-chart-bar-Line, .vector, .radar, .Home-map { width: 100%; }
+  .Home-chart-bar-Line { height: 435px; }
+  .radar { display: flex; height: 100%; }
+  .Home-header { flex-direction: column; gap: 10px; }
+  .generalStatisticsCard { width: 100%; max-width: 70%; }
+  .statisticsValue p { font-size: 20px; }
+  .Home-chart-victory h3 { font-size: 18px; }
 }
-.statisticsGrowth{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@media (max-width: 480px) {
+  .header h3 { font-size: 18px; }
+  .generalStatisticsCard { padding: 15px; gap: 20px; width: 100%; max-width: 100%; }
+  .radar { width: 100%; height: 100%; }
+  .Home-chart { flex-direction: column; }
+  .statisticsValue p { font-size: 18px; }
+  .Home-chart-bar-Line { display: none; }
+  .Home-chart-victory { padding: 15px; }
+  .Home-chart-victory h3 { font-size: 16px; }
 }
-
-.w-full{
-    width: 100%;
-}
-.RadarChart{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border-radius: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.Home-chart{
-    width: 100%;
-   display: flex ;
-   gap: 20px;
-    justify-content: center;
-}
-.Home-chart-victory{
-    border: 1px solid #ffffff1a;
-    border-radius: 25px;
-    padding:  20px ;
-}
-.vector{
-    width: 60%;
-        background-color: #1a1a1a49;
-
-    
-}
-.radar{
-    display: flex;
-     justify-content: center;
-    flex-direction: column;
-    width: 40%;
-    height: 100%;
-        background-color: #1a1a1a49;
-
-}
-.Home-chart-victory h3{
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
-}
-.chart-bar{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.Home-chart-bar-Line{
-    width: 60%;
-    border-radius: 20px;
-    height: 435px;
-    padding: 20px 20px;
-        background-color: #1a1a1a49;
-
-    border: 1px solid #ffffff1a;
-}
-.ChartContainer{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.Home-map{
-    width:40%;
-    display: flex;
-    gap: 20px;
-    height: 435px;
-    border-radius: 20px;
-        background-color: #1a1a1a49;
-    padding: 20px ;
-    border: 1px solid #ffffff1a;
-    flex-direction: column;
-}
-.Home-map div{
-    width: 100%;
-    height: 100% !important;
-    display: flex;
-}
-
 @media screen and (max-width:5000px) and (min-width:2000px) {
     .radar{
         width: 50%;
@@ -233,17 +83,29 @@
     .statisticsHeader h4{
         font-size: 30px;
     }
-    .statisticsHeader svg{
-        width: 40px;
-        height: 40px;
-    }
+.statisticsHeader svg, .statisticsHeader .fa-icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
     .statisticsValue p{
         font-size: 50px;
     }
-    .growthIcon svg{
-        width: 50px;
-        height: 50px;
-    }
+.growthIcon svg, .growthIcon .fa-icon {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px;
+    min-height: 22px;
+    max-width: 22px;
+    max-height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+}
     .growthIcon span{
         font-size: 40px;
     }
@@ -305,12 +167,10 @@
     .searchContainer {
         width: 100%;
     }
-    
     .profileContainer {
         width: 100%;
         justify-content: space-between;
     }
-    
     .Home {
         padding: 15px;
         gap: 15px;

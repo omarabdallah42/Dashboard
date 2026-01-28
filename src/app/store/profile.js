@@ -7,9 +7,9 @@ export const useProfileStore = create((set) => ({
     password: "",
     remember: true,
     phone: '',
-    role: "Admain",
+    role: "Admin",
     IsSignIn: false,
-    src: "/customer3.jpeg",
+    src: "/customer3.webp",
   },
   Admaininfo: {
     name: "omar",

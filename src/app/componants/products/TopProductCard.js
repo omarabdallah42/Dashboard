@@ -5,10 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import ProductInfoDialog from './ProductInfo';
 import { useState } from 'react';
-export default function TopProductCard({src,ItemEdite ,onClose,title, price, description, rating}) {
-  const formattedRating = Number(rating).toFixed(1); // Format the rating to one decimal place
+import Image from 'next/image';
+export default function TopProductCard({src,ItemEdite ,title, price, description, rating}) {
+  const formattedRating = Number(rating).toFixed(1); 
   const [open, setOpen] = useState(false);
-  const [ItemEditeValue,SetItemEditeValue] = useState(ItemEdite)
+  const [ItemEditeValue] = useState(ItemEdite)
   return (
     <div className='TopProductCard'>
         <div className='Edit'>
@@ -16,7 +17,7 @@ export default function TopProductCard({src,ItemEdite ,onClose,title, price, des
         <ProductInfoDialog typeEdite='edite' ItemEdite={ItemEditeValue}  onClose={() => {setOpen(false);}} open={open}/>
         </div>
         <div className="img-product-card">
-        <img src={src} alt={title} />
+        <Image loading='lazy'  width={100} height={100}  src={src} alt={title} />
         </div>
         <div className="product-info">
             <h3>{title}</h3>
@@ -26,14 +27,14 @@ export default function TopProductCard({src,ItemEdite ,onClose,title, price, des
       <div className="rating">
         <div>
             {Array.from({ length: Math.floor(rating) }, (_, index) => (
-                <FontAwesomeIcon key={index} icon={faStar} />
+                <FontAwesomeIcon key={index} width={20} height={20} icon={faStar} />
             ))}
-            {rating % 1 !== 0 && <FontAwesomeIcon icon={faStarHalfStroke} />}
+            {rating % 1 !== 0 && <FontAwesomeIcon width={20} height={20} icon={faStarHalfStroke} />}
             {Array.from({ length: 5 - Math.ceil(rating) }, (_, index) => (
-                <FontAwesomeIcon key={index} icon={faStar} style={{ opacity: 0.5 }} />
+                <FontAwesomeIcon key={index} width={20} height={20} icon={faStar} style={{ opacity: 0.5 }} />
             ))}
         </div>
-        <p>{formattedRating} <FontAwesomeIcon icon={faStar} /></p>
+        <p>{formattedRating} <FontAwesomeIcon width={20} height={20} icon={faStar} /></p>
       </div>
     </div>
   );

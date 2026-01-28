@@ -27,7 +27,6 @@ export default function SignIn() {
     href: "",
     className: "notAllowed",
   });
-
   const [userinfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -45,7 +44,6 @@ export default function SignIn() {
       ...userinfo,
       IsSignIn: isCorrect,
     });
-
     setIsEmailValid(userinfo.email === Admaininfo.email);
     setIsPasswordValid(userinfo.password === Admaininfo.password);
 
@@ -144,8 +142,8 @@ export default function SignIn() {
           />
           <p>Remember Me</p>
         </div>
-
-        <Link
+            <div className="input">
+  <Link
           onClick={() => {
             setNotification({
               message: `Sign In Successfully in ${new Date().toLocaleString()} `,
@@ -162,6 +160,8 @@ export default function SignIn() {
             Sign In
           </button>
         </Link>
+            </div>
+      
       </div>
     </div>
   );

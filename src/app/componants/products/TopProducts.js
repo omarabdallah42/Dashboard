@@ -9,7 +9,7 @@ export default function TopProducts() {
   const { products, ActiveAlert} = Products();
   const [open, setOpen] = useState(false);
   const [ItemEdite,SetItemEdite]  = useState({
-    src: '/pngwing.com (12).png',
+    src: '/pngwing.com (12).webp',
     title: '',
     price: null,
     category: '',
@@ -26,7 +26,7 @@ export default function TopProducts() {
         <h2>Top Products</h2>
         <button  onClick={() => {setOpen(true)
         SetItemEdite({
-          src: '/pngwing.com (12).png',
+          src: '/pngwing.com (12).webp',
           title: '',
           price: null,
           category: '',

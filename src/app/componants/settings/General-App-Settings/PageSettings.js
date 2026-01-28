@@ -2,25 +2,24 @@
 import React, { useState, useEffect,useRef } from 'react'
 import ProfileHeaderSettings from '../Profile Header Settings'
 import '../settings.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser as fauser } from '@fortawesome/free-solid-svg-icons'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { WebsiteState } from '../../../store/WebsiteState.js'
 import { useNotificationStore } from '../../../store/notification ';
 import { Products } from '../../../store/productsState';
 import Snackbar from '@mui/material/Snackbar';
+import Image from 'next/image';
 export default function PageSettings() {
     const {setNotification} = useNotificationStore()
     const { ActiveAlert, SetActiveAlert } = Products();
   
   const { Website,About,setAbout } = WebsiteState();
   const [isSave, SetIsSave] = useState(false);
-  const [profileImg, setProfileImg] = useState('/customer3.jpeg');
+  const [profileImg, setProfileImg] = useState('/customer3.webp');
   const [websiteInfo, SetWebsitInfo] = useState({
     domainName: Website.domain,
     role: Website.role,
-    email: Website.SupportEmail,
+    email: Website.SupportEmail, 
     phone: Website.SupportPhone
   });
   const fileInputRef = useRef(null);
@@ -61,7 +60,7 @@ const handleFileChange = (e) => {
     <div className='settings-profile' >
        <div className='settings-profile-img' style={{ position:'relative' }}>
    <div className='settings-profile-img' style={{position:'relative'}} onClick={handleImgClick}>
-  <img src={profileImg} alt='Profile' className='img' style={{cursor:'pointer'}} />
+  <Image src={profileImg} width={300} height={300} alt='Profile' className='img' style={{cursor:'pointer'}} />
   <input
     type='file'
     accept='image/*'

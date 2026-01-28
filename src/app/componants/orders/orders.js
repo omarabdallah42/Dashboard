@@ -36,14 +36,14 @@ export default function Orders() {
     setAnchorEl(null);
   };
   const tableData = [
-  { src: "/customer.jpeg", count: 5, productSrc: '/pngwing.com (12).png', productTitle: 'Shoes', user: "Sara", money: 500, icon: faDollarSign, state: "In preparation", time: "2025-05-31", type: "Customer", category: "Fashion" },
-  { src: "/customer2.jpeg", count: 3, productSrc: '/pngwing.com (13).png', productTitle: 'Shirt', user: "Ali", money: 300, icon: faUserAlt, state: "Completed", time: "2025-06-01", type: "Seller", category: "Clothes" },
-  { src: "/customer3.jpeg", count: 2, productSrc: '/pngwing.com (14).png', productTitle: 'Shoes', user: "Ahmed", money: 700, icon: faMoneyCheck, state: "Under delivery", time: "2025-06-02", type: "Customer", category: "Fashion" },
-  { src: "/customer4.jpeg", count: 4, productSrc: '/pngwing.com (15).png', productTitle: 'Jacket', user: "Omar", money: 200, icon: faUserAlt, state: "In preparation", time: "2025-06-03", type: "Seller", category: "Clothes" },
-  { src: "/customer.jpeg", count: 5, productSrc: '/pngwing.com (12).png', productTitle: 'Shoes', user: "Fatma", money: 600, icon: faDollarSign, state: "Completed", time: "2025-06-04", type: "Customer", category: "Fashion" },
-  { src: "/customer2.jpeg", count: 9, productSrc: '/pngwing.com (13).png', productTitle: 'Shirt', user: "Abdullah", money: 400, icon: faUserAlt, state: "In preparation", time: "2025-06-05", type: "Seller", category: "Clothes" },
-  { src: "/customer3.jpeg", count: 10, productSrc: '/pngwing.com (14).png', productTitle: 'Shoes', user: "Hassan", money: 800, icon: faMoneyCheck, state: "Under delivery", time: "2025-06-06", type: "Customer", category: "Fashion" },
-  { src: "/customer4.jpeg", count: 20, productSrc: '/pngwing.com (15).png', productTitle: 'Jacket', user: "Mohammed", money: 350, icon: faUserAlt, state: "Completed", time: "2025-06-07", type: "Seller", category: "Clothes" },
+  { src: "/customer.webp", count: 5, productSrc: '/pngwing.com (12).webp', productTitle: 'Shoes', user: "Sara", money: 500, icon: faDollarSign, state: "In preparation", time: "2025-05-31", type: "Customer", category: "Fashion" },
+  { src: "/customer2.webp", count: 3, productSrc: '/pngwing.com (13).webp', productTitle: 'Shirt', user: "Ali", money: 300, icon: faUserAlt, state: "Completed", time: "2025-06-01", type: "Seller", category: "Clothes" },
+  { src: "/customer3.webp", count: 2, productSrc: '/pngwing.com (14).webp', productTitle: 'Shoes', user: "Ahmed", money: 700, icon: faMoneyCheck, state: "Under delivery", time: "2025-06-02", type: "Customer", category: "Fashion" },
+  { src: "/customer4.webp", count: 4, productSrc: '/pngwing.com (15).webp', productTitle: 'Jacket', user: "Omar", money: 200, icon: faUserAlt, state: "In preparation", time: "2025-06-03", type: "Seller", category: "Clothes" },
+  { src: "/customer.webp", count: 5, productSrc: '/pngwing.com (12).webp', productTitle: 'Shoes', user: "Fatma", money: 600, icon: faDollarSign, state: "Completed", time: "2025-06-04", type: "Customer", category: "Fashion" },
+  { src: "/customer2.webp", count: 9, productSrc: '/pngwing.com (13).webp', productTitle: 'Shirt', user: "Abdullah", money: 400, icon: faUserAlt, state: "In preparation", time: "2025-06-05", type: "Seller", category: "Clothes" },
+  { src: "/customer3.webp", count: 10, productSrc: '/pngwing.com (14).webp', productTitle: 'Shoes', user: "Hassan", money: 800, icon: faMoneyCheck, state: "Under delivery", time: "2025-06-06", type: "Customer", category: "Fashion" },
+  { src: "/customer4.webp", count: 20, productSrc: '/pngwing.com (15).webp', productTitle: 'Jacket', user: "Mohammed", money: 350, icon: faUserAlt, state: "Completed", time: "2025-06-07", type: "Seller", category: "Clothes" },
 ];
   const [FilterValue, SetFilterValue] = useState('');
   const [finalData, SetFinalData] = useState(tableData);

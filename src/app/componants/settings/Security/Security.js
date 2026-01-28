@@ -9,7 +9,7 @@ export default function Security() {
   const {setNotification} = useNotificationStore();
   const {Password,SetPassword} = SecuritySettings()
   const { ActiveAlert, SetActiveAlert } = Products();
-  const [realPassword,SetRealPassword] = useState(Password.Password);
+  const [realPassword] = useState(Password.Password);
   const [passwordValue,SetPasswordValue] = useState(Password.Password);
     useEffect(() => {
       SetPasswordValue(Password.Password);

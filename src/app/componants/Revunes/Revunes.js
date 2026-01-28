@@ -16,6 +16,7 @@ import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Image from "next/image";
 
 export default function Revunes() {
   const [isClient, setIsClient] = useState(false);
@@ -52,14 +53,14 @@ const ITEM_HEIGHT = 48;
     SetFilterValue(event.target.value);
   };
   const tableData = [
-    { src:"/customer.jpeg",type:'Seller' ,user: "Sara", money: 500, icon: faDollarSign, state: "Paid plan", time: "2024-5-8" },
-    { src:"/customer2.jpeg",type:'Customer' ,user: "Ali", money: 300, icon: faUserAlt, state: "Returning User", time: "2025-6-1" },
-    { src:"/customer3.jpeg",type:'Seller' ,user: "Ahmed", money: 700, icon: faMoneyCheck, state: "Free plan", time: "2025-6-2" },
-    { src:"/customer4.jpeg",type:'Seller' ,user: "Omar", money: 200, icon: faUserAlt, state: "Returning User", time: "2025-6-3" },
-    { src:"/customer.jpeg",type:'Customer' ,user: "Fatma", money: 600, icon: faDollarSign, state: "Paid plan plus", time: "2025-6-4" },
-    { src:"/customer2.jpeg",type:'Seller' ,user: "Abdullah", money: 400, icon: faUserAlt, state: "Returning User", time: "2025-6-5" },
-    { src:"/customer3.jpeg",type:'Seller' ,user: "Hassan", money: 800, icon: faMoneyCheck, state: "New User", time: "2023-6-6" },
-    { src:"/customer4.jpeg",type:'Seller' ,user: "Mohammed", money: 350, icon: faUserAlt, state: "Returning User", time: "2023-6-7" },
+    { src:"/customer.webp",type:'Seller' ,user: "Sara", money: 500, icon: faDollarSign, state: "Paid plan", time: "2024-5-8" },
+    { src:"/customer2.webp",type:'Customer' ,user: "Ali", money: 300, icon: faUserAlt, state: "Returning User", time: "2025-6-1" },
+    { src:"/customer3.webp",type:'Seller' ,user: "Ahmed", money: 700, icon: faMoneyCheck, state: "Free plan", time: "2025-6-2" },
+    { src:"/customer4.webp",type:'Seller' ,user: "Omar", money: 200, icon: faUserAlt, state: "Returning User", time: "2025-6-3" },
+    { src:"/customer.webp",type:'Customer' ,user: "Fatma", money: 600, icon: faDollarSign, state: "Paid plan plus", time: "2025-6-4" },
+    { src:"/customer2.webp",type:'Seller' ,user: "Abdullah", money: 400, icon: faUserAlt, state: "Returning User", time: "2025-6-5" },
+    { src:"/customer3.webp",type:'Seller' ,user: "Hassan", money: 800, icon: faMoneyCheck, state: "New User", time: "2023-6-6" },
+    { src:"/customer4.webp",type:'Seller' ,user: "Mohammed", money: 350, icon: faUserAlt, state: "Returning User", time: "2023-6-7" },
   ];
 
   const radarLabels = ["Subscriptions", 'Sales', "purchases", "advert", "Support"];
@@ -91,8 +92,11 @@ const ITEM_HEIGHT = 48;
 
 <td data-label="UserPhoto">
  <div className="img">
- <img
+ <Image
     src={item.src}
+    width={40}
+    height={40}
+    loading="lazy"
     alt="avatar"
   /> </div>
 </td>
@@ -139,11 +143,9 @@ const ITEM_HEIGHT = 48;
     )
   })
     if (!isClient) return <div>Loading...</div>;
-
-  // Sort Data
   return (
     <div className='Revunes'>
-      <div className='Revunes-header' style={{ width:"100%",display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" ,alignItems:"center"}}>
+      <div className='Revunes-header' aria-label="Revunes statistics">
         <GeneralStatistics 
           Growth={100} 
           data={[0, 100, 300, 600, 400, 1000]} 
@@ -175,22 +177,21 @@ const ITEM_HEIGHT = 48;
       </div>
       <div className='Revunes-chart'>
         <div className='Revunes-chart-victory' >
-          <div className='VictoryContainer-Revunes statics'>
+          <div className='VictoryContainer-Revunes statics' style={{gap:'40px'}}>
         <h3 >Revenue Statistics</h3>
-            <StaticsVector  typeBar={"$"} data={[0, 50000, 40000, 1000, 60000, 10000, 30000, 60000, 40000, 50000, 11000, 1000]} />
+            <StaticsVector  />
           </div>
           <div className='VictoryContainer-Revunes radar' >
         <h3 >Sources of income Statistics</h3>
             <RadarChart 
-              data1={[0, 50, 100, 300, 600, 400, 1100, 100]} 
-              data2={[0, 40, 50, 800, 120, 280, 480, 1080, 120]} 
+             data1={[800,200,400,600,800]} data2={[600,500,400,900,800]}
               label={radarLabels} 
             />
           </div>
         </div>
       </div>
     
-          <div className="">
+          <div>
              <div className="table-header">
       <h3 className="Rvuenes-table">Revenue Table</h3>
       <div className='searchContainer'>

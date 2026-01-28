@@ -9,9 +9,11 @@
 }
 
 .Revunes-header { 
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap:20px;
 }
 .Revunes-chart-victory{
   display: flex;
@@ -25,14 +27,17 @@
     border: 1px solid #ffffff1a;
     border-radius: 25px;
     display: flex;
-   
+   background-color: #1a1a1a49;
     padding:  20px ;
+    padding-top: 20px;
+    height: auto;
     justify-content: center;
     flex-direction: column;
 }
 .statics{
   width: 60%;
-  height: 510px;
+
+  height: auto;
 
 }
 .radar{
@@ -57,7 +62,6 @@
   flex-direction: column;
   gap: 10px;
 }
-/* تخلي كل tr يتعاملو كعناصر رأسية */
 .table tr {
   display: flex;
   justify-content: space-between;
@@ -179,7 +183,6 @@
   
   .statics{
     width: 50%;
-    height: 380px;
   }
 }
 @media screen and (max-width:980px) {

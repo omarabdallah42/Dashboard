@@ -1,75 +1,35 @@
-"use client";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-import React from "react";
-import { VictoryArea, VictoryChart, VictoryAxis, VictoryTooltip, VictoryVoronoiContainer } from "victory";
+const data = [
+  { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
+  { name: 'Page B', uv: 3000, pv: 1398, amt: 2210 },
+  { name: 'Page C', uv: 2000, pv: 9800, amt: 2290 },
+  { name: 'Page D', uv: 2780, pv: 3908, amt: 2000 },
+  { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
+  { name: 'Page F', uv: 2390, pv: 3800, amt: 2500 },
+  { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 },
+];
 
-const StaticsVector = ({ data,typeBar }) => {
-  const formattedData = data.map((y, i) => ({ x: i + 1, y }));
-
-  const maxY = Math.max(...data, 100); // حتى لو أقل من 100، المحور يوضح أنه نسبة مئوية
-  const xLength = data.length;
-
+export default function Example() {
   return (
-    <div className="VictoryContainer">
-      <VictoryChart
-        domain={{
-          x: [1, xLength],
-          y: [0, Math.ceil(maxY / 10) * 10], // تقريب لأقرب 10
+    <ResponsiveContainer width="100%" height={435}>
+      <LineChart
+        data={data}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5,
         }}
-        domainPadding={20}
-        containerComponent={<VictoryVoronoiContainer />}
       >
-        <VictoryAxis
-          label="Months"
-          style={{
-            axis: { stroke: "rgba(255, 255, 255, 0.85)" },
-            tickLabels: { fontSize: 14, padding: 10, fill: "#fff" },
-            ticks: { stroke: "rgba(255, 255, 255, 0.85)" },
-            axisLabel: { fill: "#fff", fontSize: 12, padding: 30, fontWeight: "bold" },
-          }}
-        />
-        <VictoryAxis
-          dependentAxis
-          tickFormat={(t) => `${t}${typeBar}`}
-          style={{
-            tickFormat:{fontFamily: "Arial", fontSize: 14, fill: "#fff"},
-            axis: { stroke: "rgba(255, 255, 255, 0.85)" },
-            ticks: { stroke: "rgba(255, 255, 255, 0.85)" },
-            grid: { stroke: "rgba(0, 102, 255, 0.2)" },
-            tickLabels: { fontSize: 14, padding: 5, fill: "#fff" },
-            axisLabel: { fill: "#fff", fontSize: 12, padding: 40, fontWeight: "bold" },
-          }}
-        />
-        <defs>
-          <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#1F4068" />
-            <stop offset="50%" stopColor="#1B1B2F" />
-            <stop offset="100%" stopColor="#162447" />
-          </linearGradient>
-        </defs>
-        <VictoryArea
-          data={formattedData}
-          interpolation="natural"
-          animate={{
-            duration: 1500,
-            onLoad: { duration: 1000 },
-            onExit: { duration: 500 },
-            onEnter: { duration: 1000 },
-            easing: "linear",
-          }}
-          style={{
-            data: {
-              fill: "url(#myGradient)",
-              stroke: "#fff",
-              strokeWidth: .5,
-            },
-          }}
-          labels={({ datum }) => `${datum.y.toFixed(1)}%`}
-          labelComponent={<VictoryTooltip style={{ fontSize: 14, fill: "#fff", fontWeight: "bold" }} />}
-        />
-      </VictoryChart>
-    </div>
+        <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" strokeWidth={2} />
+      </LineChart>
+    </ResponsiveContainer>
   );
-};
-
-export default StaticsVector;
+}

@@ -25,37 +25,24 @@ ChartJS.register(
   Legend
 );
 
-export default function GeneralStatistics({ data , title, value, Growth, icon }) {
-  const [arrow, setArrow] = useState(faArrowUp);
-  const [iconStateClassName, setIconStateClassName] = useState("growth");
-  const [show,SetShow] = useState(true);
-  useEffect(() => {
-    if (Growth > 0) { 
-      setArrow(faArrowUp);
-      setIconStateClassName("growth");
-    } else {
-      setArrow(faArrowDown);
-      setIconStateClassName("growth-negative");
-    }
-  }, [Growth]);
-  useEffect(() => {
-   if(data.length == 0 || Growth == 0){
-     SetShow(false);
-   }
-  }, [data, Growth]);
-  const chartData = useMemo(() => {
-    const baseData = data;
+const GeneralStatistics = React.memo(function GeneralStatistics({ data, title, value, Growth, icon }) {
+  // تحديد السهم واللون بناءً على النمو
+  const arrow = useMemo(() => (Growth > 0 ? faArrowUp : faArrowDown), [Growth]);
+  const iconStateClassName = useMemo(() => (Growth > 0 ? "growth" : "growth-negative"), [Growth]);
+  const show = useMemo(() => data.length !== 0 && Growth !== 0, [data, Growth]);
 
+  // بيانات الرسم البياني
+  const chartData = useMemo(() => {
+    if (!Array.isArray(data) || data.length === 0) return { labels: [], datasets: [] };
     let adjustedData;
     if (Growth < 0) {
-      const maxVal = Math.max(...baseData);
-      adjustedData = baseData.map((val) => maxVal - val + baseData[0]);
+      const maxVal = Math.max(...data);
+      adjustedData = data.map((val) => maxVal - val + data[0]);
     } else {
-      adjustedData = baseData;
+      adjustedData = data;
     }
-
     return {
-      labels: ['', '', '', '', '', ''],
+      labels: Array(data.length).fill(''),
       datasets: [
         {
           label: '',
@@ -67,9 +54,9 @@ export default function GeneralStatistics({ data , title, value, Growth, icon })
         },
       ],
     };
-  }, [Growth]);
+  }, [data, Growth]);
 
-  const chartOptions = {
+  const chartOptions = useMemo(() => ({
     responsive: true,
     plugins: {
       legend: { display: false },
@@ -80,32 +67,33 @@ export default function GeneralStatistics({ data , title, value, Growth, icon })
       x: { display: false, grid: { display: false } },
       y: { display: false, grid: { display: false } },
     },
-  };
+  }), []);
 
   return (
-    <div className="generalStatisticsCard">
-      <div className="statisticsHeader">
+    <section className="generalStatisticsCard" aria-label={title + " statistics"}>
+      <header className="statisticsHeader">
         <h4>{title}</h4>
-        <FontAwesomeIcon icon={icon} />
-      </div>
-
+        <FontAwesomeIcon width={20} height={20} icon={icon} aria-label={title + " icon"} />
+      </header>
       <div className="statisticsValue">
         <p>{value}</p>
       </div>
 
-      <div className="statisticsFooter">
-       { show &&  <div className="statisticsGrowth">
-          <div className="growthIcon">
-   <FontAwesomeIcon icon={arrow} className={iconStateClassName} />
-          <span className={iconStateClassName}>{Growth}%</span>
+      <footer className="statisticsFooter">
+        {show && (
+          <div className="statisticsGrowth">
+            <div className="growthIcon">
+              <FontAwesomeIcon width={15} height={15} icon={arrow} className={iconStateClassName} aria-label={Growth > 0 ? "Positive growth" : "Negative growth"} />
+              <span className={iconStateClassName}>{Growth}%</span>
+            </div>
+            <div style={{ width: 80, height: 60, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Line data={chartData} options={chartOptions} aria-label={title + " trend chart"} />
+            </div>
           </div>
-       
-
-          <div style={{ width: 80, height: 60 ,display:'flex',justifyContent:'center',alignItems:'center'}} >
-            <Line  data={chartData} options={chartOptions} />
-          </div>
-        </div>}
-      </div>
-    </div>
+        )}
+      </footer>
+    </section>
   );
-};
+});
+
+export default GeneralStatistics;

@@ -10,8 +10,6 @@ import Box from '@mui/material/Box';
 import Header from "../componants/home/Header";
 
 export default function RootLayout({ children }) {
- 
-
   const [activeTab, setActiveTab] = useState('home');
   const [drawerOpen, setDrawerOpen] = useState(false);
   return (
@@ -40,6 +38,8 @@ export default function RootLayout({ children }) {
               onClick={() => setActiveTab('home')} title="Home" icon={faHomeAlt} />
             <ButtonNavbar link={"/pages/Revunes"}  isActive={activeTab === 'dollarsign'}
               onClick={() => setActiveTab('dollarsign')} title="Revenues" icon={faDollarSign} />
+            <ButtonNavbar link={"/pages/calender"}  isActive={activeTab === 'calender'}
+              onClick={() => setActiveTab('calender')} title="Calender" icon={faTable} />
             <ButtonNavbar link={'/pages/Products'} isActive={activeTab === 'products'}
               onClick={() => setActiveTab('products')} title="Products" icon={faBoxOpen} />
             <ButtonNavbar link={'/pages/orders'} isActive={activeTab === 'orders'}
@@ -76,6 +76,8 @@ export default function RootLayout({ children }) {
               onClick={() => {setActiveTab('home'); setDrawerOpen(false);}} title="Home" icon={faHomeAlt} />
             <ButtonNavbar link={"/pages/Revunes"}  isActive={activeTab === 'dollarsign'}
               onClick={() => {setActiveTab('dollarsign'); setDrawerOpen(false);}} title="Revenues" icon={faDollarSign} />
+               <ButtonNavbar link={"/pages/calender"}  isActive={activeTab === 'calender'}
+              onClick={() => setActiveTab('calender')} title="Calender" icon={faTable} />
             <ButtonNavbar link={'/pages/Products'} isActive={activeTab === 'products'}
               onClick={() => {setActiveTab('products'); setDrawerOpen(false);}} title="Products" icon={faBoxOpen} />
             <ButtonNavbar link={'/pages/orders'} isActive={activeTab === 'orders'}

@@ -4,28 +4,27 @@ import React, { useEffect, useState } from "react";
 import { Products } from "../../store/productsState";
 import { useProfileStore } from "../../store/profile";
 import { useNotificationStore } from "../../store/notification ";
-
+import Image from "next/image";
 const ProductInfoDialog = ({ typeEdite, open, onClose, onSave, ItemEdite }) => {
   const { products, tableData, setTableData, setProducts, ActiveAlert, SetActiveAlert } = Products();
   const { Admaininfo } = useProfileStore();
   const { setNotification } = useNotificationStore();
 
-  const [src, setSrc] = useState("/pngwing.com (12).png");
+  const [src, setSrc] = useState("/pngwing.com (12).webp");
   const [showSrc, setShowSrc] = useState([
-    { src: "/pngwing.com (13).png" },
-    { src: "/pngwing.com (14).png" },
-    { src: "/pngwing.com (15).png" },
+    { src: "/pngwing.com (13).webp" },
+    { src: "/pngwing.com (14).webp" },
+    { src: "/pngwing.com (15).webp" },
   ]);
 
   const [isMobile, setIsMobile] = useState(false);
 
-  // متابعة حجم الشاشة
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 600);
     };
 
-    handleResize(); // أول مرة لما الكومبوننت يركب
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -35,8 +34,8 @@ const ProductInfoDialog = ({ typeEdite, open, onClose, onSave, ItemEdite }) => {
     user: Admaininfo.name,
     count: 0,
     time: new Date().toLocaleString(),
-    src: "/pngwing.com (12).png",
-    productSrc: "/pngwing.com (12).png",
+    src: "/pngwing.com (12).webp",
+    productSrc: "/pngwing.com (12).webp",
     productTitle: "",
     usersrc: "",
     id: 0,
@@ -57,9 +56,9 @@ const ProductInfoDialog = ({ typeEdite, open, onClose, onSave, ItemEdite }) => {
       }
     } else {
       setItemEditValue({
-        usersrc: "/customer3.jpeg",
+        usersrc: "/customer3.webp",
         user: Admaininfo.name,
-        src: "/pngwing.com (12).png",
+        src: "/pngwing.com (12).webp",
         id: 0,
         title: "",
         count: 1,
@@ -85,8 +84,10 @@ const ProductInfoDialog = ({ typeEdite, open, onClose, onSave, ItemEdite }) => {
 
   const ShowSrcImage = showSrc.map((item, index) => (
     <div key={index}>
-      <img
+      <Image
         src={item.src}
+        width={60}
+        height={60}
         onClick={() => {
           handleSwap(item.src, index);
         }}

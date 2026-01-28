@@ -47,11 +47,12 @@ body{
     font-size:  24px ;
 }
 .nav{
-    display: flex;
-    justify-content: center;
+   flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
-    flex-direction: column;
+    height: 60%;
+    display: flex;
 }
 .buttonNavbar{
     width: 150px;

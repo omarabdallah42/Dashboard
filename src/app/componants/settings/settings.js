@@ -21,7 +21,7 @@ export default function Settings() {
     email:profile.email,
     phone : profile.phone
   })
-  const [profileImg, setProfileImg] = useState('/customer3.jpeg');
+  const [profileImg, setProfileImg] = useState('/customer3.webp');
 const fileInputRef = useRef(null);
 useEffect(() => {
   setProfile({
@@ -59,7 +59,7 @@ const handleFileChange = (e) => {
     <div className='settings-profile'>
       <div className='settings-profile-img' style={{ position:'relative' }}>
    <div className='settings-profile-img' style={{position:'relative'}} onClick={handleImgClick}>
-  <Image width={50} height={50} src={profileImg} alt='Profile' className='img' style={{cursor:'pointer'}} />
+  <Image width={300} height={300} src={profileImg} alt='Profile' className='img' style={{cursor:'pointer'}} />
   <input
     type='file'
     accept='image/*'

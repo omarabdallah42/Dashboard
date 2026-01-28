@@ -36,14 +36,14 @@ export default function Orders() {
   const [search, SetSearch] = useState('');
   const [FilterValue, setFilterValue] = useState('');
   const tableData = [
-    { src:"/customer.jpeg",  type:'Seller', user: "Sara", money: "500$", rate:4.1, state: "Expert", time: "2025:5:31" },
-    { src:"/customer2.jpeg", type:'Customer',  user: "Ali", money: "300$",  rate:4.2, state: "VIP", time: "2025:6:01" },
-    { src:"/customer3.jpeg", type:'Seller',  user: "Ahmed", money: "700$",  rate:3, state: "Top Rated", time: "2025:6:02" },
-    { src:"/customer4.jpeg", type:'Customer',  user: "Omar", money: "200$", rate:4.8, state: "New User", time: "2025:6:03" },
-    { src:"/customer.jpeg" , type:'Seller',  user: "Fatma", money: "600$", rate:4.4,state: "Rating", time: "2025:6:04" },
-    { src:"/customer2.jpeg", type:'Customer',  user: "Abdullah", money: "400$", rate:4.5, state: "Average exchange", time: "2025:6:05" },
-    { src:"/customer3.jpeg", type:'Seller', user: "Hassan", money: "800$",   rate:2,state: "Top Rated", time: "2025:6:06" },
-    { src:"/customer4.jpeg", type:'Customer',  user: "Mohammed", money: "350$",  rate:5, state: "VIP", time: "2025:6:07" },
+    { src:"/customer.webp",  type:'Seller', user: "Sara", money: "500$", rate:4.1, state: "Expert", time: "2025:5:31" },
+    { src:"/customer2.webp", type:'Customer',  user: "Ali", money: "300$",  rate:4.2, state: "VIP", time: "2025:6:01" },
+    { src:"/customer3.webp", type:'Seller',  user: "Ahmed", money: "700$",  rate:3, state: "Top Rated", time: "2025:6:02" },
+    { src:"/customer4.webp", type:'Customer',  user: "Omar", money: "200$", rate:4.8, state: "New User", time: "2025:6:03" },
+    { src:"/customer.webp" , type:'Seller',  user: "Fatma", money: "600$", rate:4.4,state: "Rating", time: "2025:6:04" },
+    { src:"/customer2.webp", type:'Customer',  user: "Abdullah", money: "400$", rate:4.5, state: "Average exchange", time: "2025:6:05" },
+    { src:"/customer3.webp", type:'Seller', user: "Hassan", money: "800$",   rate:2,state: "Top Rated", time: "2025:6:06" },
+    { src:"/customer4.webp", type:'Customer',  user: "Mohammed", money: "350$",  rate:5, state: "VIP", time: "2025:6:07" },
   ];
 
   let filteredData = tableData.filter(item =>
